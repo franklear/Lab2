@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <include file="struts-default.xml" />
+    <constant name="struts.ui.theme" value="simple"/>
+    <constant name="struts.i18n.encoding" value="utf-8"></constant>
+    <constant name="struts.action.excludePattern" value="/dist/.*?"/>
+    <package name="BookManagerSystem" extends="struts-default">
+        <action name="FindBook" class="bms.FindBook">
+            <result>/FindBook.jsp</result>
+        </action>
+        <action name="AddBook" class="bms.AddBook">
+            <result name="success">/Message.jsp</result>
+            <result name="error">/Error.jsp</result>
+            <result name="input">/InputError.jsp</result>
+        </action>
+        <action name="ShowBook" class="bms.ShowBook">
+            <result name="success">/ShowBook.jsp</result>
+            <result name="error">/Error.jsp</result>
+            <result name="input">/InputError.jsp</result>
+        </action>
+        <action name="UpdateBook" class="bms.UpdateBook">
+            <result name="success">/Message.jsp</result>
+            <result name="error">/Error.jsp</result>
+            <result name="input">/InputError.jsp</result>
+        </action>
+        <action name="DeleteBook" class="bms.DeleteBook">
+            <result name="success">/Message.jsp</result>
+            <result name="error">/Error.jsp</result>
+            <result name="input">/InputError.jsp</result>
+        </action>
+        <action name="AddAuthor" class="bms.AddAuthor">
+            <result name="success">/Message.jsp</result>
+            <result name="error">/Error.jsp</result>
+            <result name="input">/InputError.jsp</result>
+        </action>
+    </package>
+</struts>
