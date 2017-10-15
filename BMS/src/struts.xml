@@ -7,7 +7,7 @@
 <struts>
     <include file="struts-default.xml" />
     <constant name="struts.ui.theme" value="simple"/>
-    <constant name="struts.i18n.encoding" value="utf-8"></constant>
+    <constant name="struts.i18n.encoding" value="utf-8"/>
     <constant name="struts.action.excludePattern" value="/dist/.*?"/>
     <package name="BookManagerSystem" extends="struts-default">
         <action name="FindBook" class="bms.FindBook">
